@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marcosino4.firstdesign.SplashScreen">
+
+    <View
+        android:id="@+id/gradientSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient"
+        android:alpha="0.5"
+        />
+
+    <ImageView
+        android:id="@+id/backgroundSplash"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/huella_splash"
+        android:transitionName="logo"
+        app:layout_constraintBottom_toTopOf="@id/h1"
+        app:layout_constraintEnd_toEndOf="@id/v2"
+        app:layout_constraintStart_toStartOf="@id/v1" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/classicaldiary"
+        android:text="@string/app_name"
+        android:transitionName="appName"
+        android:textColor="@color/pino_oscuro"
+        android:textSize="50sp"
+        android:layout_marginTop="-30dp"
+        app:layout_constraintEnd_toEndOf="@id/v2"
+        app:layout_constraintStart_toStartOf="@id/v1"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
